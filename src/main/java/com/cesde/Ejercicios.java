@@ -15,8 +15,17 @@ public class Ejercicios {
      *         Los dos números son iguales.
      */
     public String ejercicio1(int num1, int num2) {
-        // Implementar solución
-        return "";
+        if (num1 > num2) {
+            return "el numero mayor es :" + num1;
+
+            
+        }else if (num2 > num1) {
+        return "el nuemro mayor es" +num2;
+        }
+        
+    
+        
+        return "los dos numeros son iguales.";
     }
     // ----------------------------------------------------------------------------------------
 
@@ -32,8 +41,10 @@ public class Ejercicios {
      *         Lo siento, usted ha reprobado el examen.
      */
     public String ejercicio2(double calificacion) {
-       // Implementar solución
-        return "";
+       if (calificacion >= 3.5 ) {
+        return " ¡Felicidades! Usted ha aprobado el examen.";
+       }
+        return "Lo siento, usted ha reprobado el examen.";
     }
 
     // ----------------------------------------------------------------------------------------
@@ -49,9 +60,17 @@ public class Ejercicios {
      *         basado en el precio de entrada.           
      */
     public double ejercicio3(double precio) {
-        // Implementar solución
-        return 0;
+        double descuento =( precio >= 50000)  ? precio * 0.10 :precio * 0.0;
+         double precioFinal = precio - descuento ;
+
+        if (precio >= 50000) {
+            return precioFinal;
+
+            
+        }
+        return precioFinal;
     }
+
 
     // ----------------------------------------------------------------------------------------
 
@@ -81,10 +100,20 @@ public class Ejercicios {
      */
     public String ejercicio4(int tipoFigura, double ladoCuadrado, double baseTriangulo, double alturaTriangulo,
             double radioCirculo) {
-        // Implementar solución
-        return "";
-    }
-
+                double areaCuadrado = ladoCuadrado * ladoCuadrado;
+                double areaTriangulo = baseTriangulo *alturaTriangulo;
+               double areaCirculo = Math.PI *radioCirculo;
+                if (tipoFigura == 1) {
+                    return "el area del cuadrado es: " + areaCuadrado;
+                }else if (tipoFigura == 2) {
+                    return "el area del triangulo es:"+ alturaTriangulo;
+                }else if (radioCirculo == 3) {
+                    return "el radio del circulo es:" + areaCirculo;
+                }
+               
+        return "Tipo de figura no valida.";
+    
+            }
     // ----------------------------------------------------------------------------------------
 
     /**
@@ -98,7 +127,15 @@ public class Ejercicios {
      *         `num2` y `num3`.
      */
     public int ejercicio5(int num1, int num2, int num3) {
-        // Implementar solución
+        if (num1 < num2 && num1 < num3) {
+            return num1;
+        }else if ( num2 < num1 && num2 < num3){
+
+            return num2;
+        }else if ( num3 < num1 && num3 < num2){
+            return num3;
+        }
+        
         return 0;
     }
 }
